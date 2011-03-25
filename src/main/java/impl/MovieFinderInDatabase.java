@@ -8,9 +8,17 @@ import api.qualifiers.DataSource;
 import api.qualifiers.MovieDataSource;
 import entity.Movie;
 
+/**
+ * The database implementation of movie finder.
+ * Simulates a request on a two entries database data support.
+ * @author Matthieu Clochard
+ */
 @MovieDataSource(DataSource.DATABASE)
 public class MovieFinderInDatabase implements MovieFinder {
 	
+	/* (non-Javadoc)
+	 * @see api.MovieFinder#findAll()
+	 */
 	public List<Movie> findAll() {
 		
 		List<Movie> result = new ArrayList<Movie>();

@@ -6,8 +6,16 @@ import java.util.List;
 import api.MovieFinder;
 import entity.Movie;
 
+/**
+ * The default implementation of movie finder.
+ * Simulates a request on a two entries default data support.
+ * @author Matthieu Clochard
+ */
 public class MovieFinderDefault implements MovieFinder {
 
+	/* (non-Javadoc)
+	 * @see api.MovieFinder#findAll()
+	 */
 	public List<Movie> findAll() {
 		
 		List<Movie> result = new ArrayList<Movie>();

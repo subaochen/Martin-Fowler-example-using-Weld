@@ -10,16 +10,28 @@ import javax.inject.Inject;
 import api.MovieFinder;
 import entity.Movie;
 
+/**
+ * Decorator example. Decorates the all movies research method by the injection 
+ * of a new film for every result.
+ * @author Matthieu Clochard
+ */
 @Decorator
 public abstract class ResearchDecorator implements MovieFinder {
 	
-	@Inject @Delegate @Any MovieFinder finder;
+	/**
+	 * The delegate finder.
+	 */
+	@Inject @Delegate @Any 
+	private MovieFinder finder;
 
-	public List<Movie> findAll() {
+	/* (non-Javadoc)
+	 * @see api.MovieFinder#findAll()
+	 */
+	public final List<Movie> findAll() {
 
-		System.err.println("Décoration : ");
-		System.err.println("\tMéthode : " + finder.getClass() + ".findAll()");
-		System.err.println("\tAjout d'un film de John Doe: \"Decorator's movie\"");
+		System.out.println("~\t~Décoration : ");
+		System.out.println("~\t~\tMéthode : " + finder.getClass() + ".findAll()");
+		System.out.println("~\t~\tAjout d'un film de John Doe: \"Decorator's movie\"");
 		
 		List<Movie> result = finder.findAll();
 		result.add(new Movie("Decorator's movie", "John Doe"));

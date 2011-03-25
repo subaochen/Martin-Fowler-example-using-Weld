@@ -9,9 +9,12 @@ import java.lang.annotation.Target;
 
 import javax.interceptor.InterceptorBinding;
 
+/**
+ * Annotation used to indicate interceptor invocation point.
+ * @author Matthieu Clochard
+ */
 @InterceptorBinding
 @Target({METHOD, TYPE})
 @Retention(RUNTIME)
 public @interface ResearchLog {
-
 }
