@@ -1,7 +1,7 @@
 package api.qualifiers;
 
 /**
- * The enumeration of all the data supports simulated used by the annotation {@link MovieDataSource}.
+ * The enumeration of all the simulated data supports used by the annotation {@link MovieDataSource}.
  * @author Matthieu Clochard
  */
 public enum DataSource {

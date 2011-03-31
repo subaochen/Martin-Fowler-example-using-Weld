@@ -1,5 +1,6 @@
 package client;
 
+import impl.MovieFinderInDatabase;
 import interceptor.ResearchLog;
 
 import java.util.ArrayList;
